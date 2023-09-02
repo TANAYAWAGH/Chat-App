@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>SwiftChat</title>
+</head>
+<body>
+  <div class="chat-app">
+    <div class="sidebar">
+      <div class="header">
+        <h1 class="heading">SwiftChat</h1>
+        <h3>Online Users <span class="online-count">( 0 )</span></h3>
+        <ul class="online-users">
+          <!-- List items will be dynamically added here -->
+        </ul>
+      </div>
+    </div>
+    <div class="chat">
+      <div class="header">
+        <!-- Display the user's name above the chat messages -->
+        <h2 id="user-name-display" class="heading">Your Name</h2>
+      </div>
+      <div class="messages">
+        <!-- Chat messages will be dynamically added here -->
+      </div>
+      <!-- New input field for user's name -->
+      <div class="input-error" id="user-name-error">
+        <p></p>
+      </div>
+      <input type="text" id="user-name" placeholder="Your Name">
+      <!-- New input field for message -->
+      <div class="input-error" id="message-error">
+        <p></p>
+      </div>
+      <div class="input-area">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button id="send-button">
+          <i class="fas fa-paper-plane" style="color: #ffffff;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add the Socket.io script -->
+  <!-- Your existing HTML code here -->
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
